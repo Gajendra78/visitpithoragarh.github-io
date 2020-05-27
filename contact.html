@@ -388,41 +388,19 @@
                             <br>
                             <!-- Contact Form -->
                                 
-                            <form action="//submit.form" id="ContactUs100" method="post" onsubmit="return ValidateForm(this);">
-                                <script type="text/javascript">
-                                function ValidateForm(frm) {
-                                if (frm.Name.value == "") { alert('Name is required.'); frm.Name.focus(); return false; }
-                                if (frm.FromEmailAddress.value == "") { alert('Email address is required.'); frm.FromEmailAddress.focus(); return false; }
-                                if (frm.FromEmailAddress.value.indexOf("@") < 1 || frm.FromEmailAddress.value.indexOf(".") < 1) { alert('Please enter a valid email address.'); frm.FromEmailAddress.focus(); return false; }
-                                if (frm.Comments.value == "") { alert('Please enter comments or questions.'); frm.Comments.focus(); return false; }
-                                return true; }
-                                </script>
-                                <table style="max-width:100%;border:0;" cellpadding="8" cellspacing="0">
-                                <tr> <td>
-                                <label for="Name">Name*:</label></br>
-                                </td> <td>
-                                <input name="Name" type="text" maxlength="60" style="max-width:100%;" />
-                                </td> </tr> <tr> <td></br>
-                                <label for="PhoneNumber">Ph No:</label>
-                                </td> <td>
-                                <input name="PhoneNumber" type="text"  maxlength="10" style="max-width:100%;" />
-                                </td> </tr> <tr> <td></br>
-                                <label for="FromEmailAddress">Email*:</label>
-                                </td> <td>
-                                <input name="FromEmailAddress" type="text" maxlength="90" style="max-width:100%" />
-                                </td> </tr> <tr> <td> </br>
-                                <label for="Comments">Query*:</label>
-                                </td> <td>
-                                <textarea name="Comments" rows="7" cols="40" style="max-width:80%;"></textarea>
-                                </td> </tr> <tr> <td>
-                                </td> <td>
-                                <div style="float:right"><a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>
-                                <input name="skip_Submit" type="submit" value="Submit" />
-                                <script src="https://www.100forms.com/js/FORMKEY:DM7J57DWYDDE/SEND:my@email.com " type="text/javascript"></script>
-                                </td> </tr>
-                                </table>
-                                </form>
+				   <div class="contact-form">
+				       <form id ="contact-form" method="post" action="contact-form-handler.php">
+					<input name="name" type="text" class="form-control" placeholder="Your Name" required>
+					</br>
+					<input name="email" type="email" class="form-control" placeholder="Your Email" required>
+					</br>
+					<textarea name="message" class="form-control" placeholder="Your Message" rows="4" required>
 
+					</textarea> </br>   
+					<input type="submit" class="form-control" value="SEND MESSAGE" >                           
+
+				       </form>
+				   </div>
                             <!-- End Contact Form -->
                             <!-- End Main Content -->
                         </div>
